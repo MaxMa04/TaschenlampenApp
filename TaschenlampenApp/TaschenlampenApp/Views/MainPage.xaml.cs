@@ -33,14 +33,8 @@ public partial class MainPage : ContentPage
     // Verhindert, dass die Taschenlampe direkt wieder aus/angeschaltet wird
     private async void timer()
     {
-        stopWatch.Start();
-        await Task.Delay(4000);
-        if(stopWatch.ElapsedMilliseconds >= 4000)
-        {
-            Accelerometer.Start(SensorSpeed.Game);
-
-        }
-
+        await Task.Delay(2500);
+        Accelerometer.Start(SensorSpeed.Game);
     }
 
     protected override void OnAppearing()
